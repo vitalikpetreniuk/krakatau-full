@@ -6254,9 +6254,12 @@ $(function(){
 		$(this).parent().toggleClass('active');
 	});
 
-	$('.about-content__box .box-header').on('click tap', function(){
-		$(this).parent().find('.box-content').slideToggle();
-	});
+	if($(window).width()<768)
+    {
+		$('.about-content__box .box-header').on('click tap', function(){
+			$(this).parent().find('.box-content').slideToggle();
+		});
+    }
 
 	if($(window).width() > 1023)
 	{
